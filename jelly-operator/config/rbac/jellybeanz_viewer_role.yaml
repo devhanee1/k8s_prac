@@ -1,0 +1,27 @@
+# permissions for end users to view jellybeanzs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: jellybeanz-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: jelly-operator
+    app.kubernetes.io/part-of: jelly-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: jellybeanz-viewer-role
+rules:
+- apiGroups:
+  - jjeaby.github.com
+  resources:
+  - jellybeanzs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - jjeaby.github.com
+  resources:
+  - jellybeanzs/status
+  verbs:
+  - get

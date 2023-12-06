@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: jelly-operator
 repo: github.com/devhanee1/k8s_prac/jelly-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: github.com
+  group: jjeaby
+  kind: Jellybeanz
+  path: github.com/devhanee1/k8s_prac/jelly-operator/api/v1
+  version: v1
 version: "3"

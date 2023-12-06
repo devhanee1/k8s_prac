@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- jjeaby_v1_jellybeanz.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

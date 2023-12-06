@@ -1,0 +1,31 @@
+# permissions for end users to edit jellybeanzs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: jellybeanz-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: jelly-operator
+    app.kubernetes.io/part-of: jelly-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: jellybeanz-editor-role
+rules:
+- apiGroups:
+  - jjeaby.github.com
+  resources:
+  - jellybeanzs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - jjeaby.github.com
+  resources:
+  - jellybeanzs/status
+  verbs:
+  - get
