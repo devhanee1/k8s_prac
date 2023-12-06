@@ -1,0 +1,31 @@
+# permissions for end users to edit mywatchlists.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: mywatchlist-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: operator-example1
+    app.kubernetes.io/part-of: operator-example1
+    app.kubernetes.io/managed-by: kustomize
+  name: mywatchlist-editor-role
+rules:
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - mywatchlists
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - mywatchlists/status
+  verbs:
+  - get

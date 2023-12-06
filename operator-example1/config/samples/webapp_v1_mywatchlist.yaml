@@ -1,0 +1,12 @@
+apiVersion: webapp.demo.my-watchlist.io/v1
+kind: MyWatchlist
+metadata:
+  labels:
+    app.kubernetes.io/name: mywatchlist
+    app.kubernetes.io/instance: mywatchlist-sample
+    app.kubernetes.io/part-of: operator-example1
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operator-example1
+  name: mywatchlist-sample
+spec:
+  # TODO(user): Add fields here
