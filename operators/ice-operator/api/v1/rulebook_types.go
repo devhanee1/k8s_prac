@@ -30,6 +30,8 @@ type RuleBookSpec struct {
 
 	// Foo is an example field of RuleBook. Edit rulebook_types.go to remove/update
 	Foo string `json:"foo,omitempty"`
+    Name string `json:"name"`
+    Reader string `json:"reader"`
 }
 
 // RuleBookStatus defines the observed state of RuleBook

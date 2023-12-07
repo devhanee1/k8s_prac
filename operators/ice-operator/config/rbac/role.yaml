@@ -7,6 +7,32 @@ rules:
 - apiGroups:
   - webapp.my.domain
   resources:
+  - bikes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - bikes/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - bikes/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - webapp.my.domain
+  resources:
   - guestbooks
   verbs:
   - create
@@ -26,6 +52,32 @@ rules:
   - webapp.my.domain
   resources:
   - guestbooks/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - rulebooks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - rulebooks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - rulebooks/status
   verbs:
   - get
   - patch
