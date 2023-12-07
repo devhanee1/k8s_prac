@@ -1,0 +1,12 @@
+apiVersion: webapp.my.domain/v1
+kind: Bike
+metadata:
+  labels:
+    app.kubernetes.io/name: bike
+    app.kubernetes.io/instance: bike-sample
+    app.kubernetes.io/part-of: ice-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: ice-operator
+  name: bike-sample
+spec:
+  # TODO(user): Add fields here

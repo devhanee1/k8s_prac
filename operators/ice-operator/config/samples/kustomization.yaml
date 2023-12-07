@@ -1,4 +1,6 @@
 ## Append samples of your project ##
 resources:
 - webapp_v1_guestbook.yaml
+- webapp_v1_rulebook.yaml
+- webapp_v1_bike.yaml
 #+kubebuilder:scaffold:manifestskustomizesamples

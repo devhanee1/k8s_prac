@@ -17,4 +17,22 @@ resources:
   kind: Guestbook
   path: my.domain/guestbook/api/v1
   version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: my.domain
+  group: webapp
+  kind: RuleBook
+  path: my.domain/guestbook/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: my.domain
+  group: webapp
+  kind: Bike
+  path: my.domain/guestbook/api/v1
+  version: v1
 version: "3"

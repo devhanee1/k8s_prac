@@ -1,12 +1,20 @@
 # Kubebuilder init 
 ```
-kubebuilder init --domain my.domain --repo my.domain/guestbook
+$ kubebuilder init --domain my.domain --repo my.domain/guestbook
 ```
 
 # Kubebuilder create api/controller
 ```
-kubebuilder create api --group webapp --version v1 --kind Guestbook
+$ kubebuilder create api --group webapp --version v1 --kind Guestbook
 ```
+### Note
+- If you want to add another "kind", then do 'create api' again with same group name('webapp') and kind(CR) info
+```
+$ kubebuilder create api --group webapp --version v1 --kind Bike
+```
+- The Bike CR and controller is added
+- Some code which is for adding controller to manager is added to main.go 
+
 
 # apiVersion/Kind Summary
 - apiVersion is determined with group info + domain info + "/" + version info

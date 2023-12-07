@@ -1,0 +1,12 @@
+apiVersion: webapp.my.domain/v1
+kind: RuleBook
+metadata:
+  labels:
+    app.kubernetes.io/name: rulebook
+    app.kubernetes.io/instance: rulebook-sample
+    app.kubernetes.io/part-of: ice-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: ice-operator
+  name: rulebook-sample
+spec:
+  # TODO(user): Add fields here
