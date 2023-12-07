@@ -1,0 +1,7 @@
+apiVersion: webapp.my.domain/v1
+kind: Guestbook
+metadata:
+  name: gestbook-sample
+spec:
+  size: 500
+  nickname: duck-swim
