@@ -25,6 +25,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
 	jjeabyv1 "github.com/devhanee1/k8s_prac/jelly-operator/api/v1"
+	job "github.com/devhanee1/k8s_prac/jelly-operator/internal/job"
 )
 
 // JellybeanzReconciler reconciles a Jellybeanz object
@@ -50,6 +51,28 @@ func (r *JellybeanzReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 	_ = log.FromContext(ctx)
 
 	// TODO(user): your logic here
+
+	jellybeanzLogger := log.FromContext(ctx).WithValues("req.Namespace", req.Namespace, "req.Name", req.Name)
+	jellybeanzLogger.Info("Reconciling Jellybeanz.")
+
+	jellybeanz := &jjeabyv1.Jellybeanz{}
+	err := r.Client.Get(context.TODO(), req.NamespacedName, jellybeanz)
+	if err != nil {
+		jellybeanzLogger.Error(err, "Failed to get Jellybeanz")
+		return ctrl.Result{}, err
+	}
+
+	if jellybeanz.Spec.StartJob == true {
+		jellybeanzLogger.Info("Jellybeanz StartJob is true")
+
+		job := job.NewJellybeanzJobHandler(ctx, r.Client)
+		err = job.DeployJob()
+		if err != nil {
+			jellybeanzLogger.Error(err, "Failed to deploy JOB.")
+		}
+	} else {
+		jellybeanzLogger.Info("Jellybeanz StartJob is false")
+	}
 
 	return ctrl.Result{}, nil
 }

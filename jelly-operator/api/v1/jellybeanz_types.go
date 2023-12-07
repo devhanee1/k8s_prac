@@ -29,13 +29,15 @@ type JellybeanzSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Jellybeanz. Edit jellybeanz_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Foo      string `json:"foo,omitempty"`
+	StartJob bool   `json:"startJob,omitempty"`
 }
 
 // JellybeanzStatus defines the observed state of Jellybeanz
 type JellybeanzStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	JobStatus bool `json:"jobStatus,omitempty"`
 }
 
 //+kubebuilder:object:root=true
