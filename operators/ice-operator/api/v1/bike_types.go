@@ -29,9 +29,9 @@ type BikeSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Bike. Edit bike_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
-    Maker string `json:"maker"`
-    Year int `json:"year"`
+	Foo   string `json:"foo,omitempty"`
+	Maker string `json:"maker"`
+	Year  int    `json:"year"`
 }
 
 // BikeStatus defines the observed state of Bike

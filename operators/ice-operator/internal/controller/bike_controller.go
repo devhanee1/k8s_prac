@@ -18,6 +18,7 @@ package controller
 
 import (
 	"context"
+	"strconv"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -50,6 +51,12 @@ func (r *BikeReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.
 	_ = log.FromContext(ctx)
 
 	// TODO(user): your logic here
+	logger := log.FromContext(ctx).WithValues("req.Namespace", req.Namespace, "req.Name", req.Name)
+	logger.Info("######## Reconcile Loop ############\n>>>>> " + req.Name)
+
+	bike := &webappv1.Bike{}
+	r.Client.Get(context.TODO(), req.NamespacedName, bike)
+	logger.Info("####### CR Info #########\n>> Maker: " + bike.Spec.Maker + "\n>> Year : " + strconv.Itoa(bike.Spec.Year) + "\n")
 
 	return ctrl.Result{}, nil
 }

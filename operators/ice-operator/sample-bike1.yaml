@@ -1,0 +1,8 @@
+apiVersion: webapp.my.domain/v1
+kind: Bike
+metadata:
+  name: bike-sample1
+spec:
+  maker: Bianca
+  year: 2023
+
