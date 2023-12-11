@@ -1,0 +1,15 @@
+# Sites
+- https://www.armosec.io/blog/kubernetes-admission-controller/
+- https://www.crowdstrike.com/cybersecurity-101/cloud-security/kubernetes-admission-controller/
+- https://www.styra.com/blog/what-is-kubernetes-admission-control/
+- https://sysdig.com/learn-cloud-native/kubernetes-security/kubernetes-admission-controllers/
+- https://sysdig.com/blog/kubernetes-admission-controllers/
+- https://vincenthou.medium.com/how-to-create-validating-webhook-with-operator-sdk-73f9c6332609
+- https://vincenthou.medium.com/how-to-create-conversion-webhook-for-my-operator-with-operator-sdk-36f5ee0170de
+- https://book.kubebuilder.io/cronjob-tutorial/main-revisited
+- https://book.kubebuilder.io/reference/admission-webhook
+- https://book.kubebuilder.io/cronjob-tutorial/webhook-implementation
+- https://book.kubebuilder.io/reference/webhook-overview
+- https://sdk.operatorframework.io/docs/building-operators/ansible/reference/webhooks/
+- https://sdk.operatorframework.io/docs/building-operators/golang/webhook/
+- 
