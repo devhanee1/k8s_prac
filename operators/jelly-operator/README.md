@@ -89,3 +89,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+```
+kubebuilder init --domain github.com --repo github.com/devhanee1/k8s_prac/jelly-operator
+kubebuilder create api --group jjeaby --version v1 --kind Jellybeanz
+```
+----------------------------------------------------------
+Kind: Jellybeanz       Group: jjeaby.github.com
